@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Monitoramento ESP32</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Monitoramento de Circuito AC</h1>
+
+        <div class="cards">
+            <div class="card">
+                <p>Tensão</p>
+                <div class="valor" id="voltage">-- V</div>
+            </div>
+
+            <div class="card">
+                <p>Corrente</p>
+                <div class="valor" id="current">-- A</div>
+            </div>
+
+            <div class="card">
+                <p>Potência</p>
+                <div class="valor" id="power">-- W</div>
+            </div>
+        </div>
+
+        <div class="controle">
+            <label for="metric">Mostrar gráfico de: </label>
+
+            <select id="metric">
+                <option value="voltage">Tensão</option>
+                <option value="current">Corrente</option>
+                <option value="power">Potência</option>
+            </select>
+        </div>
+
+        <canvas id="chart" width="850" height="320"></canvas>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
