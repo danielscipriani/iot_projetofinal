@@ -1,0 +1,935 @@
+[
+    {
+        "id": "e12cb65bf3542d47",
+        "type": "tab",
+        "label": "Fluxo 3",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d2bada9ee1f6e23f",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "347adb01a23fd639",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "fa7923ade7c363e8",
+        "type": "mqtt-broker",
+        "name": "MQTT Janks",
+        "broker": "mqtt.janks.dev.br",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "5",
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1251550e75985b59",
+        "type": "postgreSQLConfig",
+        "name": "PostgreSQL Aula",
+        "host": "postgresql.janks.dev.br",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "projeto",
+        "databaseFieldType": "str",
+        "ssl": "true",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "iot",
+        "userFieldType": "str",
+        "password": "pepcon-garton",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "dc56baa0a36c0f9f",
+        "type": "ui-base",
+        "name": "UI Name",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "da81ff3a439b078c",
+        "type": "ui-page",
+        "name": "",
+        "ui": "dc56baa0a36c0f9f",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "347adb01a23fd639",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "0323cd777661b34f",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "da81ff3a439b078c",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "73b45852f1374d7e",
+        "type": "ui-page",
+        "name": "",
+        "ui": "dc56baa0a36c0f9f",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "347adb01a23fd639",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "71c72322a0509aef",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "da81ff3a439b078c",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d72763c913f751aa",
+        "type": "ui-group",
+        "name": "My Group",
+        "page": "73b45852f1374d7e",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "9a934e9b431f6a9a",
+        "type": "ui-page",
+        "name": "Desafio",
+        "ui": "dc56baa0a36c0f9f",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "347adb01a23fd639",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7631fde9712a7a69",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "9a934e9b431f6a9a",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "91b9e507c8e8d75b",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "42452d36ccc8971b",
+        "type": "ui-page",
+        "name": "",
+        "ui": "dc56baa0a36c0f9f",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "347adb01a23fd639",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "22bb2c91f2657e0c",
+        "type": "ui-page",
+        "name": "",
+        "ui": "dc56baa0a36c0f9f",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "347adb01a23fd639",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "9f9bdb684686550c",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "da81ff3a439b078c",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "888ad11db7247564",
+        "type": "ui-group",
+        "name": "My Group",
+        "page": "73b45852f1374d7e",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5ed9076c31a933ed",
+        "type": "ui-page",
+        "name": "",
+        "ui": "dc56baa0a36c0f9f",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "347adb01a23fd639",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b68d130f9792dc6f",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "9a934e9b431f6a9a",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "951c7da5dffd22b6",
+        "type": "telegram bot",
+        "botname": "iot1",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "de170f611e6dd07a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1468d74bc7d11db9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt://broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8d6164138d77e182",
+        "type": "mqtt in",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "topic": "v3/iot/devices/44112/up",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "fa7923ade7c363e8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79db2a978853f4c8",
+        "type": "change",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.uplink_message.decoded_payload",
+                "pt": "msg",
+                "to": "queryParameters",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "84b274d426c8703d",
+                "463b939cf7fc8aa3"
+            ]
+        ]
+    },
+    {
+        "id": "84b274d426c8703d",
+        "type": "postgresql",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "query": "INSERT INTO medicoes \n(bancada, temperatura, pressao,umidade,resistencia_gas) VALUES\n(13, $temperature_1, $barometric_pressure_1,$relative_humidity_1,$analog_in_1)\n",
+        "postgreSQLConfig": "1251550e75985b59",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 810,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f01c19fdb4b497ec",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "463b939cf7fc8aa3",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9e42711a03c79872",
+        "type": "telegram receiver",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "bot": "951c7da5dffd22b6",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "1065afac7259b0c0",
+                "f24c2c4d8ac86dd3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1065afac7259b0c0",
+        "type": "change",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.content",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "[ \"v3/iot/devices/44092/down/push\", \"v3/iot/devices/44100/down/push\" ]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 600,
+        "wires": [
+            [
+                "272d494452aa0807",
+                "9d554cf45afe7c5d"
+            ]
+        ]
+    },
+    {
+        "id": "272d494452aa0807",
+        "type": "split",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "splt": ",",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "payload",
+        "property": "topic",
+        "x": 910,
+        "y": 600,
+        "wires": [
+            [
+                "d557388553d8dc65",
+                "3858800dc9323990"
+            ]
+        ]
+    },
+    {
+        "id": "d557388553d8dc65",
+        "type": "base64",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 140,
+        "y": 900,
+        "wires": [
+            [
+                "e0471858f80b0ee7",
+                "95d3854a0f93e710"
+            ]
+        ]
+    },
+    {
+        "id": "e0471858f80b0ee7",
+        "type": "template",
+        "z": "e12cb65bf3542d47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"downlinks\": [\n        {\n            \"f_port\": 5,\n            \"frm_payload\": \"{{{payload}}}\",\n            \"priority\": \"HIGH\"\n        }\n    ]\n}",
+        "output": "json",
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "c66a93a3f4336b63",
+                "5803639b7603a0f2"
+            ]
+        ]
+    },
+    {
+        "id": "c66a93a3f4336b63",
+        "type": "mqtt out",
+        "z": "e12cb65bf3542d47",
+        "name": "MQTT",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fa7923ade7c363e8",
+        "x": 810,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "f24c2c4d8ac86dd3",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9d554cf45afe7c5d",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3858800dc9323990",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "95d3854a0f93e710",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "5803639b7603a0f2",
+        "type": "debug",
+        "z": "e12cb65bf3542d47",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b3b4f5457217e3c4",
+        "type": "change",
+        "z": "d2bada9ee1f6e23f",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "queryParameters",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "a9b0536144914e78"
+            ]
+        ]
+    },
+    {
+        "id": "a9b0536144914e78",
+        "type": "postgresql",
+        "z": "d2bada9ee1f6e23f",
+        "name": "",
+        "query": "INSERT INTO g4_dados_sensores\n(\n    voltage,\n    current,\n    power\n)\nVALUES\n(\n    $voltage,\n    $current,\n    $power\n);",
+        "postgreSQLConfig": "1251550e75985b59",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 950,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc53453d962b8cd3",
+        "type": "inject",
+        "z": "d2bada9ee1f6e23f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"voltage\":127.5,\"current\":1.8,\"power\":229.5}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 300,
+        "wires": [
+            [
+                "b3b4f5457217e3c4"
+            ]
+        ]
+    },
+    {
+        "id": "f02a697ad0d491f8",
+        "type": "mqtt in",
+        "z": "d2bada9ee1f6e23f",
+        "name": "",
+        "topic": "dados_sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1468d74bc7d11db9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "b3b4f5457217e3c4"
+            ]
+        ]
+    }
+]
