@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração Wi-Fi</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .wifi-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .wifi-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .wifi-card h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .wifi-card label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .wifi-card input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .wifi-card button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #ipInfo {
+            margin-top: 10px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wifi-container">
+        <div class="wifi-card">
+
+            <h1>Configuração Wi-Fi</h1>
+
+            <label for="ssid">Nome da Rede (SSID)</label>
+            <input
+                type="text"
+                id="ssid"
+                placeholder="Digite o nome da rede">
+
+            <label for="senha">Senha</label>
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite a senha">
+
+            <button onclick="salvarWifi()">
+                Salvar Configuração
+            </button>
+
+            <div id="status"></div>
+
+            <div id="ipInfo"></div>
+
+        </div>
+    </div>
+
+    <script src="/wifi.js"></script>
+
+</body>
+</html>

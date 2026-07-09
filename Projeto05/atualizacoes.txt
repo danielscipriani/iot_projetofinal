@@ -1,0 +1,127 @@
+PROJETO: TOMADA INTELIGENTE COM MEDICAO E DASHBOARD
+
+Objetivo geral
+
+O projeto tem como objetivo criar uma tomada inteligente capaz de ligar e
+desligar equipamentos, registrar o estado da tomada e futuramente medir o
+consumo eletrico, como tensao, corrente, potencia e energia consumida em kWh.
+
+A ideia final e permitir que uma pessoa veja, em um painel visual, quais
+tomadas da casa estao ligadas, onde elas estao localizadas e quanto cada uma
+esta consumindo.
+
+
+O que a tomada faz hoje
+
+Atualmente, o codigo ja contempla a base de uma tomada inteligente:
+
+1. Controle de liga/desliga
+   A tomada controla um rele, que funciona como um interruptor eletronico.
+   Quando o rele liga, a tomada permite passagem de energia. Quando desliga,
+   ela corta a energia do equipamento conectado.
+
+2. Integracao com Matter
+   O projeto foi estruturado para usar Matter, que e um padrao moderno de
+   automacao residencial. Na pratica, isso permite que a tomada possa aparecer
+   em aplicativos de casa inteligente, como Google Home, Apple Home ou similares.
+
+   A parte Matter foi preparada no codigo, incluindo a logica de pareamento e
+   controle da tomada. A validacao completa ainda depende de um ambiente com a
+   biblioteca Matter funcionando corretamente e com o ESP32 conectado.
+
+3. Conexao Wi-Fi
+   O codigo ja possui a etapa de conexao da tomada na rede Wi-Fi.
+
+4. Envio de estado por MQTT
+   Quando a tomada muda de estado, ela publica uma mensagem informando se esta
+   ligada ou desligada.
+
+   Exemplo de informacao enviada:
+
+   - identificador da tomada;
+   - nome da tomada;
+   - comodo onde ela esta;
+   - estado atual: ligada ou desligada;
+   - posicao no mapa da casa.
+
+
+Como os dados devem chegar ao painel
+------------------------------------
+O fluxo planejado e:
+
+ESP32 -> MQTT -> PostgreSQL -> Grafana
+
+Explicando sem termos tecnicos:
+
+1. A tomada envia uma mensagem sempre que liga ou desliga.
+2. Essa mensagem chega no MQTT.
+3. O progrma mqtt_para_postgres pega essas mensagens e salva em um banco de dados.
+4. O Grafana le o banco de dados e mostra as informacoes em um painel.
+
+O Grafana nao conversa diretamente com a tomada. Ele consulta o banco de dados.
+Isso deixa o projeto mais organizado e permite guardar historico.
+
+
+O que foi desenvolvido no codigo
+
+
+1. Codigo base da tomada inteligente.
+2. Controle do rele para ligar e desligar.
+3. Controle por comandos locais via monitor serial, util para testes.
+4. Estrutura de conexao com Matter.
+5. Conexao Wi-Fi.
+6. Conexao com o broker MQTT.
+7. Publicacao do estado da tomada em formato JSON.
+8. Estrutura SQL para criar tabelas no PostgreSQL.
+9. Script em Python para receber mensagens MQTT e salvar no PostgreSQL.
+10. Script em Python para simular uma tomada enviando mensagens de teste.
+
+
+O que ainda precisa ser desenvolvido/validar
+
+
+1. Validar o Matter em hardware real
+   E preciso testar com o ESP32 conectado, a biblioteca Matter funcionando e um
+   aplicativo de casa inteligente para parear a tomada.
+
+2. Validar o tipo Matter de tomada
+   O codigo foi ajustado para usar um endpoint Matter mais adequado para tomada,
+   chamado MatterOnOffPlugin. Ainda e preciso validar esse comportamento no ESP32
+   real com a biblioteca Matter funcionando.
+
+3. Testar o rele fisico
+   E necessario confirmar qual pino sera usado e se o modulo rele liga com HIGH
+   ou com LOW.
+
+4. Finalizar a ponte MQTT para PostgreSQL
+   O script ja existe, mas precisa ser executado em um computador ou servidor
+   que fique ativo para salvar os dados no banco.
+
+5. Configurar o banco PostgreSQL
+   E preciso executar o arquivo SQL no banco para criar as tabelas e a view que
+   o Grafana usara.
+
+6. Configurar o Grafana
+   Ainda e preciso conectar o Grafana ao PostgreSQL e montar os paineis.
+
+7. Criar o mapa das tomadas
+   O painel deve mostrar a planta ou mapa da casa com as tomadas posicionadas.
+   O codigo ja envia coordenadas X e Y para ajudar nessa etapa.
+
+8. Integrar as medicoes eletricas
+   Ainda falta receber do circuito eletronico os valores de:
+   - tensao;
+   - corrente;
+   - potencia;
+   - consumo em kWh.
+
+9. Salvar historico de consumo
+   Depois que as medicoes estiverem funcionando, o banco deve guardar tambem o
+   historico de consumo para analise no Grafana.
+
+
+
+
+mudar o algoritmo do python para o nodered
+amanha, testar o mqtt enviando dados manualmente, nodered jogar os dados para o 
+postgresql e exibir os dados ficticios no grafana
